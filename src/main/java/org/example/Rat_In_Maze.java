@@ -59,5 +59,10 @@ public class Rat_In_Maze {
                 {1, 1, 0, 0},
                 {0, 1, 1, 1}
         };
+
+        ArrayList<String> result = ratInMaze(maze);
+        for(String  p : result){
+            System.out.print(p+" ");
+        }
     }
 }
