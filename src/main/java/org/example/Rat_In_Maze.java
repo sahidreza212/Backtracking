@@ -15,10 +15,31 @@ public class Rat_In_Maze {
     }
 
     // find the all possible paths
-    public static void findPath(int r , int c , int n , int[][]maze , StringBuilder path , ArrayList<String>res){
+    public static void findPath(int r , int c , int[][]maze , StringBuilder path , ArrayList<String>res){
 
+        int n = maze.length;
+         // base case
+        if(r == n-1 && c == n-1){
+           res.add(path.toString());
+           return;
+        }
 
+        maze[r][c] = 0;
+        for(int i = 0; i<4; i++){
+            int nr = r+dr[i], nc = c+dc[i];
+            if(isValid(nr,nc,n,maze)){
+                path.append(dir.charAt(i));
+
+                // move to the next cell
+                findPath(nr,nc,maze,path,res);
+
+                // backtrack
+                path.deleteCharAt(path.length()-1);
+            }
+        }
+        maze[r][c] =1;
     }
+
     public static void main(String[] args) {
 
         int[][] maze = {
