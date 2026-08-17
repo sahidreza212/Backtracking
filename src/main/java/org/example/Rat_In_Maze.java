@@ -40,6 +40,10 @@ public class Rat_In_Maze {
         maze[r][c] =1;
     }
 
+    public static ArrayList<String > ratInMaze(int [][] maze){
+        ArrayList<String>result = new ArrayList<>();
+        int n = maze.length;
+    }
     public static void main(String[] args) {
 
         int[][] maze = {
