@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Rat_In_Maze {
 
@@ -43,6 +44,12 @@ public class Rat_In_Maze {
     public static ArrayList<String > ratInMaze(int [][] maze){
         ArrayList<String>result = new ArrayList<>();
         int n = maze.length;
+        StringBuilder path = new StringBuilder();
+        if(maze[0][0] == 1 && maze[n-1][n-1] == 1){
+            findPath(0,0,maze,path,result);
+        }
+        Collections.sort(result);
+        return result;
     }
     public static void main(String[] args) {
 
