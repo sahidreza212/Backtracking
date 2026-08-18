@@ -39,5 +39,11 @@ public class Target_Sum_Combination {
         int target = 5;
 
         ArrayList<ArrayList<Integer>>res = targetSumCombo(arr,target);
+        for(ArrayList<Integer> v : res){
+            for (int i : v){
+                System.out.print(i +" ");
+            }
+            System.out.println();
+        }
     }
 }
