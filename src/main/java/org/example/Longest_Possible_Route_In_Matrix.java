@@ -5,6 +5,34 @@ public class Longest_Possible_Route_In_Matrix {
         int m = mat.length;
         int n = mat[0].length;
 
+        // base case or destination is reached
+        if(i == x || j == y){
+            return 0;
+        }
+        // invalid case or blocked case
+        if(i < 0 || i >= m || j < 0 || j >= n || mat[i][j] == 0){
+            return -1;
+        }
+        // make the current cell as visited
+        mat[i][j] = 0;
+        int maxPath = -1;
+
+        // UDLR
+        int row[] = {-1,1,0,0};
+        int col[] = {0,0,-1,1};
+
+        for(int k = 0; k < 4; k++){
+            int ni = i+row[k];
+            int nj = j+col[k];
+            int pathLength = dfs(mat,ni,nj,x,y);
+
+            // if valid path is found then destination
+            if(pathLength != -1){
+                maxPath = Math.max(maxPath, pathLength+1);
+            }
+         }
+
+        return maxPath;
     }
     public static void main(String[] args) {
         int[][] mat = {
