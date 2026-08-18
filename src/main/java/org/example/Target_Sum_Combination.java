@@ -24,6 +24,11 @@ public class Target_Sum_Combination {
         cur.remove(cur.size()-1);
         makeCombination(arr,remSum,cur,res,index+1);
     }
+    // function to find the all combinations of the  element
+
+    public static ArrayList<ArrayList<Integer>> targetSumCombo(int arr[] , int target){
+
+    }
     public static void main(String[] args) {
 
         int arr[] = {1,2,3};
