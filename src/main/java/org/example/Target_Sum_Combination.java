@@ -37,5 +37,7 @@ public class Target_Sum_Combination {
 
         int arr[] = {1,2,3};
         int target = 5;
+
+        ArrayList<ArrayList<Integer>>res = targetSumCombo(arr,target);
     }
 }
