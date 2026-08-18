@@ -34,6 +34,17 @@ public class Longest_Possible_Route_In_Matrix {
 
         return maxPath;
     }
+
+    public static int longestPath(int mat[][] , int xs, int ys ,int xd, int  yd){
+        int m = mat.length;
+        int n = mat[0].length;
+
+       if(mat[xs][ys] == 0 ||  mat[xd][yd] == 0){
+           return -1;
+       }
+
+       return dfs(mat,xs,ys,xd,yd);
+    }
     public static void main(String[] args) {
         int[][] mat = {
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -41,7 +52,6 @@ public class Longest_Possible_Route_In_Matrix {
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
         };
 
-        int xs = 0, ys = 0;
-        int xd = 1, yd = 7;
+
     }
 }
