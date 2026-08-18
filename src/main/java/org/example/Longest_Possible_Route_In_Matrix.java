@@ -6,7 +6,7 @@ public class Longest_Possible_Route_In_Matrix {
         int n = mat[0].length;
 
         // base case or destination is reached
-        if(i == x || j == y){
+        if(i == x && j == y){
             return 0;
         }
         // invalid case or blocked case
