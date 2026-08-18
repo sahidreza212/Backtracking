@@ -52,6 +52,14 @@ public class Longest_Possible_Route_In_Matrix {
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
         };
 
+        int xs = 0, ys = 0;
+        int xd = 1, yd = 7;
 
+        int result = longestPath(mat,xs,ys,xd,yd);
+        if(result != -1){
+            System.out.print(result);
+        }else {
+            System.out.print(-1);
+        }
     }
 }
