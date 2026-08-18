@@ -20,6 +20,9 @@ public class Target_Sum_Combination {
         // recursion with the same element
         makeCombination(arr,remSum-arr[index],cur,res,index);
 
+        // recursion with the different element
+      //  makeCombination(arr,remSum-arr[index],cur,res,index+1);
+
         // backtrack(remove the current element and make the backtrack)
         cur.remove(cur.size()-1);
         makeCombination(arr,remSum,cur,res,index+1);
